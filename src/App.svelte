@@ -45,16 +45,27 @@
 </div>
 
 <style>
+
+:global(*) {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     
+    }
   :global(body) {
     margin: 0;
     padding: 0;
+  
   }
 
   .wrapper {
     height: 100vh;
+    width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
+    margin: 0px;
+    padding: 0px;
   }
 
   header {
@@ -76,16 +87,19 @@
   }
   .background,
   .foreground {
+ 
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
     z-index: -1;
   }
   .title {
-    font-size: 7rem;
+   
     color: white;
     text-shadow: 0 0 5px black;
+    font-size: clamp(1rem, 15vw, 6rem); 
+    
   }
 
   section {
